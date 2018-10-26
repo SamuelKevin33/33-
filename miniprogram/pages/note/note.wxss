@@ -1,0 +1,48 @@
+page{
+  background: #f2fee6;
+}
+.note-container{
+  padding-top: 40rpx;
+}
+.note-list{
+  display: flex;
+  flex-direction: row;
+}
+.note-show_date{
+  padding:0 60rpx;
+  width: 140rpx;
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+}
+.note-thisday_content{
+  /* flex-direction: column; */
+}
+.note-show_year{
+  color: #7e88ac;
+  font-size: 80rpx;
+  font-weight: 300;
+  line-height:107rpx;
+
+}
+.not-show_date{
+  color: #fba5ca;
+}
+.note-content{
+  margin-bottom: 40rpx;
+  min-height:120rpx;
+  width: 360rpx;
+  padding:30rpx;
+  background: #fff;
+  box-shadow: 0 1px 1px #fba5ca;
+  border-radius: 0 30rpx 0 30rpx;
+  font-size: 30rpx;
+  color: #fba5ca;
+}
+.note-add_note{
+  position: fixed;
+  height: 80rpx;
+  width: 80rpx;
+  bottom:140rpx;
+  right:80rpx;
+}

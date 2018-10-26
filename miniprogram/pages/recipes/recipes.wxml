@@ -1,0 +1,28 @@
+<view class="recipes-container">
+  <input type="search" class="recipes-search" placeholder='搜一下菜谱名'></input>
+  <view class="recipes-typebar">
+    <button class="recipes-typebar_btn">
+      <image class="recipes-typebar_icon" src="../../images/change_money.png"></image>
+      <text>全部</text>
+    </button>
+    <button class="recipes-typebar_btn">
+      <image class="recipes-typebar_icon" src="../../images/change_money.png"></image>
+      <text>种类</text>
+    </button>
+    <button class="recipes-typebar_btn">
+      <image class="recipes-typebar_icon" src="../../images/change_money.png"></image>
+      <text>热门</text>
+    </button>
+    <button class="recipes-typebar_btn">
+      <image class="recipes-typebar_icon" src="../../images/change_money.png"></image>
+      <text class="recipes-typebar_icon" src="../../images/change_money.png">记录</text>
+    </button>
+  </view>
+  <view class="recipes-list">
+    <view class="recipes-list_items" wx:for="{{[12,34,56]}}">
+      <text class="recipes-title">土豆丝土豆丝土豆丝土豆丝</text>
+      <text class="recipes-type">炒菜 </text>
+      <image class="recipes-good_mask" src="../../images/good.png"></image>
+    </view>
+  </view>
+</view>

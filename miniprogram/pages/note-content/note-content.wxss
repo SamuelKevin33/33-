@@ -1,0 +1,72 @@
+.note-content_text{
+  width:100%;
+  height:100%;
+
+  border:4rpx dashed #fba5ca;
+  border-radius:8rpx;
+  padding:30rpx;
+  overflow:hidden;
+  color: #cc4496;
+  line-height: 50rpx;
+  font-size: 36rpx;
+  box-sizing:border-box;
+
+}
+.note-content_container{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  padding:100rpx 0;
+  height:100%;
+  box-sizing:border-box;
+}
+.note-content_form{
+  align-items:center;
+  width: 80%;
+  height:100%;
+  box-sizing:border-box;
+}
+.note-content_sub{
+  position:absolute;
+  top:30rpx;
+  right:70rpx;
+  padding:0;
+  height:60rpx;
+  font-size:36rpx;
+  line-height:60rpx;
+  width:120rpx;
+  background: #cc4496;
+  color:#fff;
+}
+page{
+  height: 100%;
+  background: #f2fee6;
+}
+.note-content_model{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+
+}
+.note-content_success{
+  font-size:60rpx;
+  margin-top:125rpx;
+  display:block;
+  color:#cc4496;
+  letter-spacing:7rpx;
+
+}
+.note-content_back{
+  background:#cc4496;
+  width:200rpx;
+  padding:10rpx;
+  text-align:center;
+  border-radius:10rpx;
+  color:#f2fee6;
+  margin-top:40rpx;
+
+}

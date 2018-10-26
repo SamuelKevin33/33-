@@ -1,0 +1,10 @@
+<view class="note-content_container">
+  <form wx:if="{{ showmodel}}" class="note-content_form" bindsubmit="formSubmit">
+    <button class="note-content_sub" formType="submit">保存</button>
+    <textarea name="notecontent" value="{{contentValue}}" class="note-content_text" maxlength='600'></textarea>
+  </form>
+  <view wx:else class="note-content_model">
+    <text class="note-content_success">发布成功</text>
+    <view class="note-content_back" bindtap='gotoNoteList'>回到日记页</view>
+  </view>
+</view>

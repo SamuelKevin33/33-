@@ -1,0 +1,45 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="index-userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称       </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="index-userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <view class="index-user-hello">
+        <text class="index-userinfo-nickname">{{userInfo.nickName}},您好~</text>
+        <text class="index-userinfo-nickname">今天是{{dateInfo}}</text>
+      </view>
+    </block>
+  </view>
+  <view class="index-list">
+    <view class="index-list_left">
+      <view class="index-list_leftcontainer" wx:for="{{list_num}}">
+        <view class="index-curcle"></view>
+        <view class="index-line"></view>
+      </view>
+      <view class="index-curcle"></view>
+    </view>
+    <view class="index-list_right">
+      <view class="index-usermoney"> 
+        <text>您目前剩余资金有：<text class ="index_num-color">{{money_sum}}</text> 元</text>
+        <image class="index-usermoney_change" src="../../images/change_money.png"></image>
+        <text>每日平均零用钱: <text class ="index_num-color">{{ money_sum/2}}</text> 元</text>
+      </view>
+      <view class="index-usermoney"> 
+        <text>您的食谱数量为 ：<text class ="index_num-color">{{money_sum}}</text> 条</text>
+        <image class="index-usermoney_change" src="../../images/change_money.png"></image>
+        <text>涉及的种类有：<text class ="index_num-color">30</text> 种</text>
+      </view>
+      <view class="index-usermoney"> 
+        <text>您已记录了 <text class ="index_num-color">123</text> 天的喜怒哀乐</text>
+        <image class="index-usermoney_change" src="../../images/change_money.png"></image>
+        <text>共开心 <text class ="index_num-color">3</text> 次 平静 <text class ="index_num-color">3</text> 次 难过 <text class ="index_num-color">3</text> 次</text>
+      </view>
+      <view class="index-usermoney"> 
+        <text>今天杂货铺又是元气满满的一天呐！</text>
+      </view>
+    </view>
+  </view>
+  <!-- <view class="index-usermotto">
+    <text class="index-user-motto">{{motto}}</text>
+  </view> -->
+</view>

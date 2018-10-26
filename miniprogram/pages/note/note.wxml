@@ -1,0 +1,14 @@
+<view class="note-container">
+  <view class="note-list" wx:for="{{note_list}}">
+    <view class="note-show_date">
+      <text class="note-show_year">{{item.day}}</text>
+      <text class="not-show_date">{{item.date}}</text>
+    </view>
+    <view class="note-thisday_content">
+      <view class="note-content" wx:for="{{item.list}}">{{item}}</view>
+    </view>
+  </view>
+  <navigator url="/pages/note-content/note-content" open-type="redirect">
+    <image class="note-add_note" src="../../images/add-note.png"></image>
+  </navigator> 
+</view>

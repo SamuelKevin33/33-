@@ -1,0 +1,87 @@
+/**index.index-wxss**/
+
+.index-userinfo {
+  display: flex;
+  flex-direction: row;
+  /* align-items: center; */
+  justify-content: flex-start;
+}
+
+.index-userinfo-avatar {
+  justify-content: flex-start;
+  width: 100rpx;
+  height: 100rpx;
+  margin: 30rpx 10rpx 30rpx 50rpx;
+  border-radius: 50%;
+  border: 4rpx solid #fba5ca;
+}
+
+.index-userinfo-nickname {
+  color:#7e88ac;
+}
+
+.index-usermotto {
+  margin-top: 200px;
+}
+
+.index-user-hello {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 30rpx;
+  font-size: 35rpx;
+  letter-spacing: 2rpx;
+}
+
+.index-usermoney {
+  margin-top: 10rpx;
+  display: flex;
+  flex-direction: row;
+  background: #abe1d3;
+  border-radius: 0 10rpx 10rpx 10rpx;
+  padding: 20rpx;
+  font-size: 33rpx;
+  color: #f2fee6;
+  width: 520rpx;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 92rpx;
+}
+
+.index-usermoney_change {
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.index-list {
+  display: flex;
+  flex-direction: row;
+}
+
+.index-list_left {
+  display: flex;
+  flex-direction: column;
+  margin: 0 50rpx 0 50rpx;
+}
+
+.index-curcle {
+  width: 25rpx;
+  height: 25rpx;
+  border-radius: 25rpx;
+  background: #abe1d3;
+}
+
+.index-line {
+  width: 10rpx;
+  height: 210rpx;
+  background: #abe1d3;
+}
+
+.index-list_leftcontainer {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.index_num-color{
+  color:#fba5ca;
+}
