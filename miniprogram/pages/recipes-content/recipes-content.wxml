@@ -1,0 +1,21 @@
+<view class="recipes-content_container">
+  <form wx:if="{{ showmodel }}" class="recipes-content_form" bindsubmit="formSubmit">
+    <textarea maxlength='15' class="recipes-content_title" name="recipescontent" value="{{recipesValue}}" placeholder='请输入标题'></textarea>
+    <view class="recipes-content_zhengwen">
+      <picker value="{{multiIndex}}" name="picketype" class="recipes-content_select" bindchange="bindPickerChange"  range="{{array}}">
+        <view class="picker">
+        <text class="picker-mask" wx:if="{{!array[index]}}">选择类型</text>
+        <text  wx:else class="picker-mask">{{ array[index] }}</text>
+        </view>
+      </picker>
+      <textarea name="recipenewtext" maxlength='600' class="recipes-text" placeholder='请输入正文'></textarea>
+    </view>
+    <view  class="recipes-sub-container">
+      <button formType="submit" class="recipes_sub-new">发布</button>
+    </view>
+  </form>
+  <view wx:else class="note-content_model">
+    <text class="note-content_success">发布成功</text>
+    <view class="note-content_back" bindtap='gotoNoteList'>回到日记页</view>
+  </view>
+</view>

@@ -1,9 +1,11 @@
 {
   "pages": [
-    "pages/note/note",
-    "pages/index/index",
+    "pages/recipes-content/recipes-content",
     "pages/recipes/recipes",
+    "pages/index/index",
+    "pages/note/note",
     "pages/note-content/note-content"
+    
   ],
   "window": {
     "backgroundTextStyle": "light",

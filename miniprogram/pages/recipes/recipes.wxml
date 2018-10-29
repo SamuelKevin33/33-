@@ -13,10 +13,10 @@
       <image class="recipes-typebar_icon" src="../../images/change_money.png"></image>
       <text>热门</text>
     </button>
-    <button class="recipes-typebar_btn">
+    <navigator class="recipes-typebar_btn" url="/pages/recipes-content/recipes-content" open-type="redirect">
       <image class="recipes-typebar_icon" src="../../images/change_money.png"></image>
       <text class="recipes-typebar_icon" src="../../images/change_money.png">记录</text>
-    </button>
+    </navigator>
   </view>
   <view class="recipes-list">
     <view class="recipes-list_items" wx:for="{{[12,34,56]}}">

@@ -21,16 +21,18 @@ Page({
     //   date: '2213/2',
     //   list: ['果列表中项目的位置', '新的项目添加到列表']
     // }],
-    note_list: [],
+    listnew: [],
+    listnewnum: 0,
+    num: 0
   },
-  wash: function(arr){
-    
+  wash: function (arr) {
+
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+
   },
 
   /**
@@ -38,44 +40,67 @@ Page({
    */
   onReady: function () {
     var that = this;
-    db.collection('user-note').get({
+    db.collection('user-note').orderBy('_id', 'desc').get({
       success: function (res) {
         var list = [];
-        var num = 0;
-        console.log(res.data, "123")
         list = res.data;
-        var listnew = [];
+        
         for (var i in list) {
-          
+
           var date = list[i].date.getUTCMonth() + '/' + list[i].date.getUTCFullYear()
           var day = list[i].date.getUTCDate()
-          if(i==0){
-            listnew[num].list.push(list[i].content);
-            listnew[num].date = date;
-            listnew[num].day = day;
-            console.log(1)
+          list[i].day = day
+          list[i].datenew = date;
+
+          if (i == 0) {
+            var param_content = 'listnew[0].list[0]';
+            var param_date = 'listnew[0].date';
+            var param_day = 'listnew[0].day';
+            var param_dateId = 'listnew[0].dateId'
+
+            that.setData({
+              [param_content]: list[0].content,
+              [param_date]: date,
+              [param_day]: day,
+              [param_dateId]: list[0].date,
+            })
+
+          } else {
+
+            if (i != 0 && list[i].datenew == list[i - 1].datenew && list[i].day == list[i - 1].day) {
+
+              var num = that.data.num
+              var listnewnum = that.data.listnewnum + 1;
+              var param_content = 'listnew[' + num + '].list[' + listnewnum + ']'
+              
+              that.setData({
+                [param_content]: list[i].content,
+                listnewnum: listnewnum
+              })
+
+            } else {
+
+              var num = that.data.num + 1;
+              var listnewnum = 0;
+              var param_content = 'listnew[' + num + '].list[0]';
+              var param_date = 'listnew[' + num + '].date';
+              var param_day = 'listnew[' + num + '].day';
+              var param_dateId = 'listnew[' + num + '].dateId'
+
+              that.setData({
+                [param_content]: list[i].content,
+                [param_date]: date,
+                [param_day]: day,
+                [param_dateId]: list[i].date,
+                num: num,
+                listnewnum: listnewnum
+              })
+
+            }
+
           }
-          console.log(3)
-          if (i!=0 && list[i].date == list[i - 1].date){
-            listnew[num].list.push(list[i].content);
-          }else{
-            num++;
-            listnew[num].list.push(list[i].content);
-            listnew[num].date = date;
-            listnew[num].day = day;
-          }
-          
-          
-          // list[i].date = date
-          // list[i].day = day
         }
-        console.log(listnew,"sdafsd")
-        // that.setData({
-        //   note_list: list
-        // })
-        
-        // res.data 是一个包含集合中有权限访问的所有记录的数据，不超过 20 条
-        
+
       }
     })
   },

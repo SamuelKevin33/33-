@@ -1,5 +1,5 @@
 <view class="note-container">
-  <view class="note-list" wx:for="{{note_list}}">
+  <view class="note-list" wx:for="{{listnew}}">
     <view class="note-show_date">
       <text class="note-show_year">{{item.day}}</text>
       <text class="not-show_date">{{item.date}}</text>
