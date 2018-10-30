@@ -18,24 +18,28 @@ Page({
     })
   },
   formSubmit: function (e) {
-    console.log(this.data,'123')
-    // db.collection('user-recipe').add({
-    //   // data 字段表示需新增的 JSON 数据
-    //   data: {
-    //     title: e.detail.value.recipescontent,
-    //     ptype: e.detail.value.picketype,
-    //     content: e.detail.value.recipenewtext,
-    //     hot: false
-    //   }
-    // })
-    //   .then(res => {
-    //     this.setData({
-    //       showmodel: false
-    //     })
-    //     // this.setData({ contentValue: ''});
+    console.log(this.data.array[e.detail.value.picketype],'123')
+    var picketype = this.data.array[e.detail.value.picketype];
+    db.collection('user-recipe').add({
+      // data 字段表示需新增的 JSON 数据
+      data: {
+        title: e.detail.value.recipescontent,
+        ptype: picketype,
+        content: e.detail.value.recipenewtext,
+        hot: false
+      }
+    })
+      .then(res => {
+        this.setData({
+          showmodel: false
+        })
+      })
 
-    //   })
-
+  },
+  gotoRecipesList: function () {
+    wx.switchTab({
+      url: '/pages/recipes/recipes'
+    })
   },
   /**
    * 生命周期函数--监听页面加载

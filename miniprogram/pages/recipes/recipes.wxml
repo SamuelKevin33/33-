@@ -19,10 +19,10 @@
     </navigator>
   </view>
   <view class="recipes-list">
-    <view class="recipes-list_items" wx:for="{{[12,34,56]}}">
-      <text class="recipes-title">土豆丝土豆丝土豆丝土豆丝</text>
-      <text class="recipes-type">炒菜 </text>
-      <image class="recipes-good_mask" src="../../images/good.png"></image>
+    <view class="recipes-list_items" wx:for="{{recipeList}}">
+      <text class="recipes-title">{{item.title}}</text>
+      <text class="recipes-type">{{item.ptype}} </text>
+      <image wx:if="{{item.hot}}" class="recipes-good_mask" src="../../images/good.png"></image>
     </view>
   </view>
 </view>

@@ -1,9 +1,10 @@
 {
   "pages": [
-    "pages/recipes-content/recipes-content",
+
     "pages/recipes/recipes",
     "pages/index/index",
     "pages/note/note",
+    "pages/recipes-content/recipes-content",
     "pages/note-content/note-content"
     
   ],
