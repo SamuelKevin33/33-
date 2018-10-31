@@ -4,11 +4,12 @@
     <view class="recipes-content_zhengwen">
       <picker name="picketype"  class="recipes-content_select" bindchange="bindPickerChange"  range="{{array}}">
         <view class="picker">
-        <text class="picker-mask" wx:if="{{!array[index]}}">选择类型</text>
-        <text wx:else class="picker-mask">{{ array[index] }}</text>
+        <text class="picker-mask" wx:if="{{ array[index]}}">{{ array[index] }}</text>
+        <text class="picker-mask" wx:elif="{{recipesType}}">{{recipesType}}</text>
+        <text wx:else class="picker-mask">选择类型</text>
         </view>
       </picker>
-      <textarea name="recipenewtext" maxlength='600' class="recipes-text" placeholder='请输入正文'></textarea>
+      <textarea value="{{recipesZheng}}" name="recipenewtext" maxlength='600' class="recipes-text" placeholder='请输入正文'></textarea>
     </view>
     <view  class="recipes-sub-container">
       <button formType="submit" class="recipes_sub-new">发布</button>

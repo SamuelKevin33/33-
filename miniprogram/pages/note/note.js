@@ -32,7 +32,7 @@ Page({
         
         for (var i in list) {
 
-          var date = list[i].date.getUTCMonth() + '/' + list[i].date.getUTCFullYear()
+          var date = (list[i].date.getUTCMonth()+1) + '/' + list[i].date.getUTCFullYear()
           var day = list[i].date.getUTCDate()
           list[i].day = day
           list[i].datenew = date;

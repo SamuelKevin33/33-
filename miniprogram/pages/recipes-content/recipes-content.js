@@ -7,8 +7,11 @@ Page({
    */
   data: {
     showmodel: true,
-    array: ['炒菜', '面食', '泡菜', '汤类','烘培'],
-    multiIndex: 0
+    array: ['炒菜', '面食', '泡菜', '汤类', '烘培'],
+    multiIndex: 0,
+    recipesValue: '',
+    recipesType: '',
+    id: ''
   },
 
   bindPickerChange: function (e) {
@@ -18,23 +21,46 @@ Page({
     })
   },
   formSubmit: function (e) {
-    console.log(this.data.array[e.detail.value.picketype],'123')
-    var picketype = this.data.array[e.detail.value.picketype];
-    db.collection('user-recipe').add({
-      // data 字段表示需新增的 JSON 数据
-      data: {
-        title: e.detail.value.recipescontent,
-        ptype: picketype,
-        content: e.detail.value.recipenewtext,
-        hot: false
-      }
-    })
-      .then(res => {
-        this.setData({
-          showmodel: false
-        })
+    var that = this;
+    var picketype = ''
+    if (e.detail.value.picketype){
+      picketype = that.data.array[e.detail.value.picketype]
+    }else{
+      picketype = that.data.recipesType
+    }
+    if (that.data.recipesType){
+      db.collection('user-recipe').doc(that.data.id).update({
+        data: {
+          title: e.detail.value.recipescontent,
+          ptype: picketype,
+          content: e.detail.value.recipenewtext,
+          hot: false
+        },
+        success: function(res){
+          console.log('res')
+          that.setData({
+            showmodel: false
+          })
+        }
       })
-
+    }else{
+      var picketype = this.data.array[e.detail.value.picketype];
+      db.collection('user-recipe').add({
+        // data 字段表示需新增的 JSON 数据
+        data: {
+          title: e.detail.value.recipescontent,
+          ptype: picketype,
+          content: e.detail.value.recipenewtext,
+          hot: false
+        }
+      })
+        .then(res => {
+          this.setData({
+            showmodel: false
+          })
+        })
+    }
+  
   },
   gotoRecipesList: function () {
     wx.switchTab({
@@ -45,7 +71,26 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    var that = this;
+    var id = options.id;
+    this.setData({
+      id: id
+    })
+    if (id) {
+      db.collection('user-recipe').where({
+        _id: id
+      }).get({
+        success: function (res) {
+          that.setData({
+            recipesValue: res.data[0].title,
+            recipesType: res.data[0].ptype,
+            recipesZheng: res.data[0].content
+          })
+          console.log(res.data)
+        }
+      })
+    }
+    console.log(id, '134')
   },
 
   /**
