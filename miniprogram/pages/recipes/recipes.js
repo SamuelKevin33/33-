@@ -38,10 +38,32 @@ Page({
     })
     console.log(e.currentTarget.dataset.id,'123')
   },
+  searchList: function(){
+    var that = this;
+    var content = that.data.searchcontent;
+    // console.log(that.data.searchcontent, 'find')
+    var list = that.data.recipeList;
+    var listnew = [];
+    for (var i in list){
+      if(list[i].title == content){
+        listnew = listnew.concat(list[i])
+      }
+    }
+    that.setData({
+      filterList: listnew
+    })
+  },
+  changeInp: function(e){
+    var content = e.detail.value;
+    this.setData({
+      searchcontent: content
+    })
+  },
   /**
    * 页面的初始数据
    */
   data: {
+    searchcontent: '',
     recipeList: [],
     filterList: [],
     typeList: []

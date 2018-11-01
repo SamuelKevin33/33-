@@ -1,8 +1,7 @@
 {
   "pages": [
-
-    "pages/recipes/recipes",
     "pages/index/index",
+    "pages/recipes/recipes",
     "pages/note/note",
     "pages/recipes-content/recipes-content",
     "pages/note-content/note-content"

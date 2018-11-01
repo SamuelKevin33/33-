@@ -1,5 +1,9 @@
 <view class="recipes-container">
-  <input type="search" class="recipes-search" placeholder='搜一下菜谱名'></input>
+  <view class="recipes-search">
+    <input type="search" bindinput="changeInp" bindconfirm='searchList' confirm-type='search' value="{{searchcontent}}" class="recipes-search_inp" placeholder='搜一下菜谱名'></input>
+    <image bindtap="searchList" class="recipes-search_icon" src="../../images/search.png"></image>
+  </view>
+
   <view class="recipes-typebar">
     <button bindtap='selectAll' class="recipes-typebar_btn">
       <image class="recipes-typebar_icon" src="../../images/change_money.png"></image>

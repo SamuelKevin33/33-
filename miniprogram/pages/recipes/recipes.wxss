@@ -18,6 +18,9 @@
   border-radius: 10rpx;
   font-size: 32rpx;
   padding: 0 10rpx;
+  flex-direction:row;
+  display:flex;
+  align-items:center;
 }
 .recipes-typebar_btn{
   background: none;
@@ -78,3 +81,11 @@
   display: block;
 }
 button::after{ border: none; }
+.recipes-search_icon{
+  width:45rpx;
+  height:45rpx;
+}
+.recipes-search_inp{
+  width:96%;
+
+}
