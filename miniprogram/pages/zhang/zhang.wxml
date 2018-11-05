@@ -1,0 +1,24 @@
+<view class="zhang-container">
+  <view class="zhang-title">
+    <text class="zhang-yue">本月余额</text>
+    <text class="zhang-yue-num">￥12344</text>
+    <view class="zhang-zhuangkuang">
+      <text class="zhang-zhuangkuang-num">本月支出 ￥</text>
+      <text class="zhang-zhuangkuang-num">本月预算 ￥</text>
+    </view>
+  </view>
+  <view class="zhang-day" wx:for="{{listnew}}">
+    <text class="zhang-day-line">{{item.date}}</text>
+    <text class="zhang-day-line">收入: 0 支出： 0</text>
+    <view class="zhang-fenge" wx:for="{{item.list}}">
+      <view class="zhang-fengeL" >
+        <image class="zhang-shouzhi_mask" src='../../images/shou.png'></image>
+        <text>{{item}}</text>
+      </view>
+      <text class="zhang-day-liushui">-1234</text>
+    </view>
+  </view>
+  <navigator url="/pages/note-content/note-content" >
+    <image class="note-add_note" src="../../images/add-note.png"></image>
+  </navigator> 
+</view>

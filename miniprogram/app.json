@@ -1,8 +1,10 @@
 {
   "pages": [
+        "pages/zhang/zhang",
     "pages/index/index",
     "pages/recipes/recipes",
     "pages/note/note",
+
     "pages/recipes-content/recipes-content",
     "pages/note-content/note-content"
     
@@ -32,6 +34,12 @@
         "text": "谱",
         "iconPath": "images/recipes_logo.png",
         "selectedIconPath": "images/recipes_hover.png"
+      },
+      {
+        "pagePath": "pages/zhang/zhang",
+        "text": "账",
+        "iconPath": "images/zhang.png",
+        "selectedIconPath": "images/zhang_hover.png"
       }
     ],
     "backgroundColor": "#7e88ac",

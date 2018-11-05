@@ -17,7 +17,7 @@
       <image class="recipes-typebar_icon" src="../../images/change_money.png"></image>
       <text>热门</text>
     </button>
-    <navigator class="recipes-typebar_btn" url="/pages/recipes-content/recipes-content?id=" open-type="redirect">
+    <navigator class="recipes-typebar_btn" url="/pages/recipes-content/recipes-content?id=" >
       <image class="recipes-typebar_icon" src="../../images/change_money.png"></image>
       <text class="recipes-typebar_icon" src="../../images/change_money.png">记录</text>
     </navigator>

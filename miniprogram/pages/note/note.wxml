@@ -8,7 +8,7 @@
       <view class="note-content" wx:for="{{item.list}}">{{item}}</view>
     </view>
   </view>
-  <navigator url="/pages/note-content/note-content" open-type="redirect">
+  <navigator url="/pages/note-content/note-content" >
     <image class="note-add_note" src="../../images/add-note.png"></image>
   </navigator> 
 </view>

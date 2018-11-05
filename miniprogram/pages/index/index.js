@@ -59,7 +59,7 @@ Page({
         that.setData({
           noteLen: res.data.length
         });
-        console.log(res.data, 'd')
+        // console.log(res.data, 'd')
       }
     })
     db.collection('user-recipe').get({
@@ -72,14 +72,14 @@ Page({
           if (!listnew[list[i].ptype]) {
             listnew[list[i].ptype] = list[i].ptype;
             listneww = listneww + 1;
-            console.log(listneww)
+            // console.log(listneww)
           }
         }
         that.setData({
           recipeType: listneww,
           recipeLen: res.data.length
         });
-        console.log(res.data, 'd')
+        // console.log(res.data, 'd')
       }
     })
     var date = new Date();

@@ -21,17 +21,21 @@
     <view class="index-list_right">
       <view class="index-usermoney"> 
         <text>您目前剩余资金有：<text class ="index_num-color">{{money_sum}}</text> 元</text>
-        <image class="index-usermoney_change" src="../../images/change_money.png"></image>
+        <navigator><image class="index-usermoney_change" src="../../images/change_money.png"></image></navigator>
         <text>每日平均零用钱: <text class ="index_num-color">{{ money_sum/2}}</text> 元</text>
       </view>
       <view class="index-usermoney"> 
         <text>您的食谱数量为 ：<text class ="index_num-color">{{recipeLen}}</text> 条</text>
-        <image class="index-usermoney_change" src="../../images/change_money.png"></image>
+        <navigator url="/pages/recipes-content/recipes-content?id=">
+          <image class="index-usermoney_change" src="../../images/change_money.png"></image>
+        </navigator>
         <text>涉及的种类有：<text class ="index_num-color">{{recipeType}}</text> 种</text>
       </view>
       <view class="index-usermoney"> 
         <text>您已记录了 <text class ="index_num-color">{{noteLen}}</text> 条的喜怒哀乐</text>
-        <image class="index-usermoney_change" src="../../images/change_money.png"></image>
+        <navigator url="/pages/note-content/note-content">
+          <image class="index-usermoney_change" src="../../images/change_money.png"></image>
+        </navigator>
         <text>枯藤老树时，它是最好的你的电影</text>
       </view>
       <view class="index-usermoney"> 

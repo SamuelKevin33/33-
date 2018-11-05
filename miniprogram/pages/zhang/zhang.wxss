@@ -1,0 +1,67 @@
+.zhang-container{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.zhang-title{
+  width: 100%;
+  background: #fba5ca;
+  color: #fff;
+  padding: 25rpx;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  box-shadow: 0 1px 5px #cc4496;
+}
+.zhang-yue-num{
+  color: #cc4496;
+  font-size: 58rpx;
+}
+.zhang-zhuangkuang-num{
+  font-size: 30rpx;
+}
+.zhang-zhuangkuang{
+  display: flex;
+  justify-content: space-between;
+}
+.zhang-day{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  padding: 20rpx 25rpx 0 25rpx;
+}
+.zhang-day-line{
+  width: 50%;
+  color: #888;
+  font-size: 34rpx;
+}
+.zhang-fenge{
+  width:100%;
+  border-top: 1rpx solid #fba5ca;
+
+  display: flex;
+  align-items: center;
+  padding: 10rpx 0;
+  justify-content: space-between;
+  color: #444;
+}
+.zhang-fengeL{
+  display: flex;
+  align-items: center;
+}
+.zhang-shouzhi_mask{
+  width: 60rpx;
+  height: 60rpx;
+}
+.zhang-day-liushui{
+  
+}
+.note-add_note{
+  position: fixed;
+  height: 80rpx;
+  width: 80rpx;
+  bottom:140rpx;
+  right:80rpx;
+}
