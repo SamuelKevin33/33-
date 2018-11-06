@@ -84,7 +84,7 @@ Page({
       }
     })
     var date = new Date();
-    var dateString = date.getUTCFullYear() + '年' + date.getUTCMonth() + '月' + date.getUTCDate() + '日';
+    var dateString = date.getUTCFullYear() + '年' + (date.getUTCMonth()+1) + '月' + date.getUTCDate() + '日';
     this.setData({ dateInfo: dateString });
     db.collection('user-zhang').get({
       success: function (res) {
