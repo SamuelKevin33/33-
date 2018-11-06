@@ -65,3 +65,41 @@
   bottom:140rpx;
   right:80rpx;
 }
+.modal{
+  position: fixed;
+  top: 300rpx;
+  left: 10%;
+  width: 80%;
+  height: 400rpx;
+  /* margin: 0 auto; */
+  background: #7e88ac;
+  color: #7e88ac;
+  border: 6rpx solid #f2fee6;
+  border-radius:20rpx;
+}
+.close_modal{
+  position: absolute;
+  top: -15rpx;
+  width: 60rpx;
+  height: 60rpx;
+  right: -15rpx;
+}
+.jiInp{
+  width: 80%;
+  background: #f2fee6;
+  margin: 0 auto;
+  margin-top: 30rpx;
+  border-radius: 10rpx;
+  font-size: 34rpx;
+  box-sizing: border-box;
+  padding: 5rpx 10rpx;
+}
+.jiSub{
+  margin-top:40rpx;
+  width: 80%;
+  height: 60rpx;
+  font-size: 36rpx;
+  background: #abe1d3;
+  line-height: 60rpx;
+  color: #f2fee6;
+}

@@ -1,24 +1,31 @@
 <view class="zhang-container">
   <view class="zhang-title">
     <text class="zhang-yue">本月余额</text>
-    <text class="zhang-yue-num">￥12344</text>
+    <text class="zhang-yue-num">￥ {{yu}}</text>
     <view class="zhang-zhuangkuang">
-      <text class="zhang-zhuangkuang-num">本月支出 ￥</text>
-      <text class="zhang-zhuangkuang-num">本月预算 ￥</text>
+      <text class="zhang-zhuangkuang-num">本月支出 ￥{{zhi}}</text>
+      <text class="zhang-zhuangkuang-num">本月预算 ￥{{6000}}</text>
     </view>
   </view>
   <view class="zhang-day" wx:for="{{listnew}}">
     <text class="zhang-day-line">{{item.date}}</text>
-    <text class="zhang-day-line">收入: 0 支出： 0</text>
+    <text class="zhang-day-line">收入: {{item.shou}} 支出： {{item.zhi}}</text>
     <view class="zhang-fenge" wx:for="{{item.list}}">
       <view class="zhang-fengeL" >
         <image class="zhang-shouzhi_mask" src='../../images/shou.png'></image>
-        <text>{{item}}</text>
+        <text>{{item.name}}</text>
       </view>
-      <text class="zhang-day-liushui">-1234</text>
+      <text class="zhang-day-liushui">{{item.zhang}}</text>
     </view>
   </view>
-  <navigator url="/pages/note-content/note-content" >
-    <image class="note-add_note" src="../../images/add-note.png"></image>
-  </navigator> 
+    <image bindtap='showmodal' class="note-add_note" src="../../images/add-note.png"></image>
+  <view wx:if="{{showmodel}}" class="modal">
+    <image bindtap='closemodal' class="close_modal" src="../../images/close.png"></image>
+    <form bindsubmit="formSubmit">
+      <input class="jiInp" name="name" placeholder='请输入名称'></input>
+      <input class="jiInp" name="zhang" placeholder='请输入金额（元）'></input>
+      <input class="jiInp" name="ztype" placeholder='支出为 1 收入为2 请填写'></input>
+      <button formType="submit" class="jiSub">记一笔</button>
+    </form>
+  </view>
 </view>

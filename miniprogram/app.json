@@ -1,10 +1,9 @@
 {
   "pages": [
-        "pages/zhang/zhang",
     "pages/index/index",
     "pages/recipes/recipes",
     "pages/note/note",
-
+    "pages/zhang/zhang",
     "pages/recipes-content/recipes-content",
     "pages/note-content/note-content"
     

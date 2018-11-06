@@ -21,7 +21,6 @@
     <view class="index-list_right">
       <view class="index-usermoney"> 
         <text>您目前剩余资金有：<text class ="index_num-color">{{money_sum}}</text> 元</text>
-        <navigator><image class="index-usermoney_change" src="../../images/change_money.png"></image></navigator>
         <text>每日平均零用钱: <text class ="index_num-color">{{ money_sum/2}}</text> 元</text>
       </view>
       <view class="index-usermoney"> 
