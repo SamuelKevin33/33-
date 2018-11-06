@@ -12,7 +12,8 @@ Page({
     money_sum: 123,
     list_num: 3,
     recipeLen: 0,
-    noteLen: 0
+    noteLen: 0,
+    zong: 0
   },
   //事件处理函数
   bindViewTap: function () {
@@ -85,6 +86,23 @@ Page({
     var date = new Date();
     var dateString = date.getUTCFullYear() + '年' + date.getUTCMonth() + '月' + date.getUTCDate() + '日';
     this.setData({ dateInfo: dateString });
+    db.collection('user-zhang').get({
+      success: function (res) {
+        var list = res.data;
+        var zong = 6000;
+        for (var i in list){
+          if(list[i].type == 1){
+            zong = parseInt(zong) - parseInt(list[i].zhang);
+          }else{
+            zong = parseInt(zong) + parseInt(list[i].zhang);
+          }
+        }
+        that.setData({
+          zong : zong
+        })
+        // console.log(zong,'fsfd')
+      }
+    });
   },
   getUserInfo: function (e) {
     // console.log(e)

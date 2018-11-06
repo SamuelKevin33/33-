@@ -20,8 +20,8 @@
     </view>
     <view class="index-list_right">
       <view class="index-usermoney"> 
-        <text>您目前剩余资金有：<text class ="index_num-color">{{money_sum}}</text> 元</text>
-        <text>每日平均零用钱: <text class ="index_num-color">{{ money_sum/2}}</text> 元</text>
+        <text>您目前剩余资金有：<text class ="index_num-color">{{zong}}</text> 元</text>
+        <text>本月已支出: <text class ="index_num-color">{{ 6000 -zong }}</text> 元</text>
       </view>
       <view class="index-usermoney"> 
         <text>您的食谱数量为 ：<text class ="index_num-color">{{recipeLen}}</text> 条</text>
